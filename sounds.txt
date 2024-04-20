@@ -1,0 +1,9 @@
+pop = 0
+bouncy = 1
+sploit = 2
+swish2 = 3
+clank = 4
+breathe2 = 5
+entity = 6
+terrier = 7
+pom = 8

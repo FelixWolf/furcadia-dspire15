@@ -1,0 +1,176 @@
+DSPK V04.00 Furcadia
+
+(0:0) When everything is starting up,
+    (5:651) use the PhoenixSpeak 'real and official' area to store info from now on.
+    (5:212) set silent speech prefix (for spoken commands) to {'}.
+    (5:210) set entrytext to {Welcome to DragonSpires. 'help for help.}.
+    (5:105) set entry music to 100.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 0 of it to {the floor.}.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 2 of it to {a Dragon tile.}.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 5 of it to {grass.}.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 6 of it to {sand.}.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 8 of it to {dirt.}.
+    (5:276) use message ~LookablesFloors[10] as an array, and set entry 9 of it to {flowers.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 0 of it to {a scroll.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 1 of it to {some armor.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 2 of it to {something.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 3 of it to {a bottle.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 4 of it to {a sword.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 5 of it to {a small pouch.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 6 of it to {a white mark.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 7 of it to {an evil-vampire-happy-funball!}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 8 of it to {a table.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 9 of it to {a smelly fish.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 10 of it to {a chalice.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 11 of it to {a sword.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 12 of it to {a bush.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 13 of it to {a tree.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 14 of it to {a treasure chest!}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 15 of it to {a 'pop'!}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 16 of it to {Gauntlet's throne.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 17 of it to {a chair.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 18 of it to {the magic doggie biscuit!}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 19 of it to {a little fish.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 20 of it to {a sign.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 21 of it to {a pillar.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 22 of it to {a statue of RazorHawk.}.
+    (5:276) use message ~LookablesItems[24] as an array, and set entry 23 of it to {a mirror.}.
+
+
+* Move to holding cell
+
+(0:9) When a furre arrives in the dream,
+   (4:9) only in places where someone can walk,
+    (5:500) set variable %tmp to the X,Y position of a random spot within the rectangle (112,9) - (114,109).
+    (5:15) move the triggering furre to (%tmp), or to someplace nearby if it's occupied.
+    (5:90) turn the triggering furre to face northeast.
+    (5:182) move the triggering furre's DragonSpeak Button 1 to (0,0).
+    (5:182) move the triggering furre's DragonSpeak Button 2 to (512,0).
+    (5:182) move the triggering furre's DragonSpeak Button 3 to (0,0).
+    (5:182) move the triggering furre's DragonSpeak Button 4 to (512,0).
+    (5:182) move the triggering furre's DragonSpeak Button 5 to (0,0).
+    (5:182) move the triggering furre's DragonSpeak Button 6 to (512,0).
+    (5:180) show the triggering furre's DragonSpeak Button 3.
+    (5:180) show the triggering furre's DragonSpeak Button 4.
+
+
+* Show title
+(0:71) When someone stays in the same square for 1 seconds,
+ (1:13) and they are facing northeast (up and right),
+ (1:80) and they are within the rectangle (112,9) - (114,109),
+    (5:180) show the triggering furre's DragonSpeak Button 1.
+    (5:180) show the triggering furre's DragonSpeak Button 2.
+    (5:181) hide the triggering furre's DragonSpeak Button 3.
+    (5:181) hide the triggering furre's DragonSpeak Button 4.
+    (5:30) play midi 31 to the triggering furre.
+    (5:91) turn the triggering furre to face southeast.
+    (5:500) set variable %tmp to the X,Y position of a random spot within the rectangle (112,9) - (114,109).
+    (5:15) move the triggering furre to (%tmp), or to someplace nearby if it's occupied.
+
+* Hide title
+(0:71) When someone stays in the same square for 2 seconds,
+ (1:14) and they are facing southeast (down and right),
+ (1:80) and they are within the rectangle (112,9) - (114,109),
+    (5:181) hide the triggering furre's DragonSpeak Button 1.
+    (5:181) hide the triggering furre's DragonSpeak Button 2.
+    (5:180) show the triggering furre's DragonSpeak Button 3.
+    (5:180) show the triggering furre's DragonSpeak Button 4.
+    (5:92) turn the triggering furre to face southwest.
+    (5:500) set variable %tmp to the X,Y position of a random spot within the rectangle (112,9) - (114,109).
+    (5:15) move the triggering furre to (%tmp), or to someplace nearby if it's occupied.
+
+* Move to spawn
+(0:71) When someone stays in the same square for 1 seconds,
+ (1:15) and they are facing southwest (down and left),
+ (1:80) and they are within the rectangle (112,9) - (114,109),
+    (5:181) hide the triggering furre's DragonSpeak Button 1.
+    (5:181) hide the triggering furre's DragonSpeak Button 2.
+    (5:181) hide the triggering furre's DragonSpeak Button 3.
+    (5:181) hide the triggering furre's DragonSpeak Button 4.
+    (5:180) show the triggering furre's DragonSpeak Button 5.
+    (5:180) show the triggering furre's DragonSpeak Button 6.
+    (5:1000) redraw the screen and show everything that's just changed.
+    (5:181) hide the triggering furre's DragonSpeak Button 5.
+    (5:181) hide the triggering furre's DragonSpeak Button 6.
+    (5:180) show the triggering furre's DragonSpeak Button 11.
+    (5:182) move the triggering furre's DragonSpeak Button 11 to (161,141).
+    (5:180) show the triggering furre's DragonSpeak Button 13.
+    (5:182) move the triggering furre's DragonSpeak Button 13 to (159,18).
+    (5:442) jump the animation of the triggering furre's DragonSpeak Button 11 to step 201.
+    (5:442) jump the animation of the triggering furre's DragonSpeak Button 13 to step 6.
+    (5:15) move the triggering furre to (34,25), or to someplace nearby if it's occupied.
+    (5:316) set the triggering furre's entry code to 100.
+
+
+(0:31) When someone says {'help},
+    (5:200) emit message {Type to talk.} to the triggering furre.
+    (5:200) emit message {/&lt;name&gt; <msg> to whisper.} to the triggering furre.
+    (5:200) emit message {:<text> to pose.} to the triggering furre.
+    (5:200) emit message {Use 1-3-7-9 on the keypad to move.(Numlock must be OFF.)} to the triggering furre.
+    (5:200) emit message {Insert and Delete turn in place.} to the triggering furre.
+    (5:200) emit message {Shift-Up and shift-down arrows scrollback.} to the triggering furre.
+    (5:200) emit message {'look to look at things.} to the triggering furre.
+    (5:200) emit message {F2 to get/drop.} to the triggering furre.
+    (5:200) emit message {F3 key swings sword.} to the triggering furre.
+    (5:200) emit message {Ctrl-B exits the game.} to the triggering furre.
+    (5:200) emit message {F4 to list other players online.} to the triggering furre.
+
+
+(0:31) When someone says {'look},
+    (5:350) set variable %tmp to the X,Y position the triggering furre (moved from/is standing at).
+
+(0:31) When someone says {'look},
+ (1:13) and they are facing northeast (up and right),
+    (5:352) move the position in variable %tmp northeast (up and right) 1 step(s).
+
+(0:31) When someone says {'look},
+ (1:14) and they are facing southeast (down and right),
+    (5:353) move the position in variable %tmp southeast (down and right) 1 step(s).
+
+(0:31) When someone says {'look},
+ (1:15) and they are facing southwest (down and left),
+    (5:354) move the position in variable %tmp southwest (down and left) 1 step(s).
+
+(0:31) When someone says {'look},
+ (1:16) and they are facing northwest (up and left),
+    (5:355) move the position in variable %tmp northwest (up and left) 1 step(s).
+
+(0:31) When someone says {'look},
+    (5:250) set message ~seen to {nothing.}.
+    (5:381) set variable %looked to the item type at (%tmp).
+
+(0:31) When someone says {'look},
+ (1:200) and variable %looked is equal to 0,
+    (5:380) set variable %looked to the floor type at (%tmp).
+
+(0:31) When someone says {'look},
+ (1:201) and variable %looked is more than 510,
+ (1:202) and variable %looked is less than 521,
+    (5:250) set message ~seen to {a wall.}.
+
+(0:31) When someone says {'look},
+ (1:201) and variable %looked is more than 520,
+ (1:202) and variable %looked is less than 542,
+    (5:250) set message ~seen to {the corner of a wall.}.
+
+(0:31) When someone says {'look},
+ (1:201) and variable %looked is more than 2399,
+ (1:202) and variable %looked is less than 2424,
+    (5:304) take variable %looked and subtract 2400 from it.
+    (5:275) use message ~Lookables as an array, and copy entry %looked of it into message ~seen.
+
+(0:31) When someone says {'look},
+ (1:201) and variable %looked is more than 499,
+ (1:202) and variable %looked is less than 511,
+    (5:304) take variable %looked and subtract 500 from it.
+    (5:275) use message ~LookablesFloors as an array, and copy entry %looked of it into message ~seen.
+
+(0:31) When someone says {'look},
+    (5:200) emit message {* You see ~seen *} to the triggering furre.
+
+
+
+
+
+
+*Endtriggers* 8888 *Endtriggers*

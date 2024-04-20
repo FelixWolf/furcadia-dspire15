@@ -1,0 +1,7 @@
+This tries to be as 100% accurate to the original DragonSpires.
+The following changes have been made:
+1. Marbled.pcx has been changed so that chat more seamlessly works with the
+    Furcadia style chat bar (Middle bar removed)
+2. Marbled.pcx has been changed to remove the blank section of the stamina bar
+    and make correct it so that it works with DS Buttons.
+3. Marbled.pcx has been changed so that the Life indicator are dimmed by default.
